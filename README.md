@@ -43,3 +43,5 @@
 - User Story #14: On regular sized devices (laptops, desktops), the element with `id="navbar"` should be shown on the left side of the screen and should always be visible to the user.
 
 - User Story #15: My Technical Documentation page should use at least one media query.
+
+See the official instructions on the [FreeCodeCamp Website](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page).
