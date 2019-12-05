@@ -10,6 +10,13 @@
 </head>
 
 <body>
+    <nav id="navbar">
+        <header>Getting Started With C#</header>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#hello_world">Hello World!</a></li>
+        </ul>
+    </nav>
     <main id="main-doc">
         <section class="main-section">
             <header id="introduction">Introduction</header>
@@ -49,31 +56,24 @@
             <header id="hello_world">Hello World!</header>
             <p>
                 The "Hello, World" program is traditionally used to introduce a programming language. Here it is in C#:
-                <pre>
                     <code>
                         using System;
-
                         class Hello {
                             static void Main() {
                                 Console.WriteLine("Hello, World");
                             }
                         }
                     </code>
-                </pre>
                 C# source files typically have the file extension .cs. Assuming that the "Hello, World" program is
                 stored in the file hello.cs, the program might be compiled using the command line:
-                <pre>
                     <code>
                         csc hello.cs
                     </code>
-                </pre>
                 which produces an executable assembly named hello.exe. The output produced by this application when it
                 is run is:
-                <pre>
                     <code>
                         Hello, World
                     </code>
-                </pre>
             </p>
         </section>
         <section class="main-section">
