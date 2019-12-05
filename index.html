@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <title>Technical Documentation Project</title>
 </head>
 
@@ -45,7 +46,35 @@
             </p>
         </section>
         <section class="main-section">
-            <h2></h2>
+            <header id="hello_world">Hello World!</header>
+            <p>
+                The "Hello, World" program is traditionally used to introduce a programming language. Here it is in C#:
+                <pre>
+                    <code>
+                        using System;
+
+                        class Hello {
+                            static void Main() {
+                                Console.WriteLine("Hello, World");
+                            }
+                        }
+                    </code>
+                </pre>
+                C# source files typically have the file extension .cs. Assuming that the "Hello, World" program is
+                stored in the file hello.cs, the program might be compiled using the command line:
+                <pre>
+                    <code>
+                        csc hello.cs
+                    </code>
+                </pre>
+                which produces an executable assembly named hello.exe. The output produced by this application when it
+                is run is:
+                <pre>
+                    <code>
+                        Hello, World
+                    </code>
+                </pre>
+            </p>
         </section>
         <section class="main-section">
             <h2></h2>
