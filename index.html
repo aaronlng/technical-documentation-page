@@ -17,11 +17,13 @@
                 <li><a class="nav-link" href="#introduction">Introduction</a></li>
                 <li><a class="nav-link" href="#hello_world">Hello World!</a></li>
                 <li><a class="nav-link" href="#types_and_variables">Types and Variables</a></li>
+                <li><a class="nav-link" href="#expressions">Expressions</a></li>
+                <li><a class="nav-link" href="#arrays">Arrays</a></li>
             </ul>
         </nav>
         <main id="main-doc">
-            <section class="main-section">
-                <h2 id="introduction">Introduction</h2>
+            <section class="main-section" id="introduction">
+                <header>Introduction</header>
                 <p>
                     C# is an object-oriented language, but C# further includes support for component-oriented
                     programming.
@@ -67,8 +69,8 @@
                     overload resolution, and support for explicit interface member declarations.
                 </p>
             </section>
-            <section class="main-section">
-                <h2 id="hello_world">Hello World!</h2>
+            <section class="main-section" id="hello_world!">
+                <header>Hello World!</header>
                 <p>
                     The "Hello, World" program is traditionally used to introduce a programming language. Here it is in
                     C#:
@@ -93,8 +95,8 @@
                     </code>
                 </p>
             </section>
-            <section class="main-section">
-                <h2 id="types_and_variables">Types and Variables</h2>
+            <section class="main-section" id="types_and_variables">
+                <header>Types and Variables</header>
                 <p>
                     There are two kinds of types in C#: value types and reference types. Variables of value types
                     directly contain their data whereas variables of reference types store references to their data, the
@@ -135,11 +137,86 @@
                     </ul>
                 </p>
             </section>
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="expressions">
+                <header>Expressions</header>
+                <p>
+                    Expressions are constructed from operands and operators. The operators of an expression indicate
+                    which operations to apply to the operands. Examples of operators include +, -, *, /, and new.
+                    Examples of operands include literals, fields, local variables, and expressions.
+                </p>
+                <p>
+                    When an expression contains multiple operators, the precedence of the operators controls the order
+                    in which the individual operators are evaluated. For example, the expression x + y * z is evaluated
+                    as x + (y * z) because the * operator has higher precedence than the + operator.
+                </p>
+                <p>
+                    C# provides a number of operators to perform arithmetic, logical, bitwise and shift operations and
+                    equality and order comparisons.
+                </p>
             </section>
-            <section class="main-section">
-                <h2></h2>
+            <section class="main-section" id="arrays">
+                <header>Arrays</header>
+                <p>
+                    An array is a data structure that contains a number of variables that are accessed through computed
+                    indices. The variables contained in an array, also called the elements of the array, are all of the
+                    same type, and this type is called the element type of the array.
+                </p>
+                <p>
+                    Array types are reference types, and the declaration of an array variable simply sets aside space
+                    for a reference to an array instance. Actual array instances are created dynamically at runtime
+                    using the new operator. The new operation specifies the length of the new array instance, which is
+                    then fixed for the lifetime of the instance. The indices of the elements of an array range from 0 to
+                    Length - 1. The new operator automatically initializes the elements of an array to their default
+                    value, which, for example, is zero for all numeric types and null for all reference types.
+                </p>
+                <p>
+                    The following example creates an array of int elements, initializes the array, and prints out the
+                    contents of the array.
+                    <code>
+                            using System;
+                            class ArrayExample
+                            {
+                                static void Main() 
+                                {
+                                    int[] a = new int[10];
+                                    for (int i = 0; i < a.Length; i++) 
+                                    {
+                                        a[i] = i * i;
+                                    }
+                                    for (int i = 0; i < a.Length; i++) 
+                                    {
+                                        Console.WriteLine($"a[{i}] = {a[i]}");
+                                    }
+                                }
+                            }
+                    </code>
+                </p>
+                <p>
+                    This example creates and operates on a single-dimensional array. C# also supports multi-dimensional
+                    arrays. The number of dimensions of an array type, also known as the rank of the array type, is one
+                    plus the number of commas written between the square brackets of the array type. The following
+                    example allocates a single-dimensional, a two-dimensional, and a three-dimensional array,
+                    respectively.
+                    <code>
+                            int[] a1 = new int[10];
+                            int[,] a2 = new int[10, 5];
+                            int[,,] a3 = new int[10, 5, 2];
+                    </code>
+                    The a1 array contains 10 elements, the a2 array contains 50 (10 × 5) elements, and the a3 array
+                    contains 100 (10 × 5 × 2) elements. The element type of an array can be any type, including an array
+                    type. An array with elements of an array type is sometimes called a jagged array because the lengths
+                    of the element arrays do not all have to be the same. The following example allocates an array of
+                    arrays of int:
+                    <code>
+                            int[][] a = new int[3][];
+                            a[0] = new int[10];
+                            a[1] = new int[5];
+                            a[2] = new int[20];
+                    </code>
+                    The first line creates an array with three elements, each of type int[] and each with an initial
+                    value of null. The subsequent lines then initialize the three elements with references to individual
+                    array instances of varying lengths.
+                </p>
             </section>
         </main>
     </div>
