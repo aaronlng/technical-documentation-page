@@ -51,9 +51,14 @@ body {
     border-bottom: 1px solid #000;
 }
 
-#navbar li a {
+.nav-link {
     text-decoration: none;
     color: #000;
+    z-index: 3;
+}
+
+.nav-link:hover {
+    color: white;
 }
 
 /* Main Content */
